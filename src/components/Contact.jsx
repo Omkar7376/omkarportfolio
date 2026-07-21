@@ -10,7 +10,7 @@ const Contact = () => {
     const formData = new FormData(event.target);
 
     // Replace with your Web3Forms Access Key
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "0b7d8eb6-8b05-4861-b63a-223f050c2773");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
