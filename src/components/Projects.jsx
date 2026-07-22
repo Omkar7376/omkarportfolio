@@ -31,7 +31,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-12">
+    <section id="projects" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,16 +41,16 @@ const Projects = () => {
         <h2 className="text-3xl md:text-5xl font-bold mb-12 flex items-center">
           <span className="text-secondary mr-4">02.</span> Featured Projects
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               whileHover={{ y: -10 }}
               className="glass-card p-8 flex flex-col relative group overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-tertiary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-              
+
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-textBase group-hover:text-secondary transition-colors">{project.title}</h3>
                 <div className="flex space-x-4">
@@ -61,9 +61,9 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-              
+
               <p className="text-textMuted mb-8 flex-grow">{project.description}</p>
-              
+
               <ul className="flex flex-wrap gap-2 mt-auto">
                 {project.stack.map((tech, i) => (
                   <li key={i} className="text-xs font-mono text-tertiary bg-tertiary/10 px-3 py-1 rounded-full">

@@ -5,7 +5,7 @@ import profileImg from '../assets/omkarprofile.jpeg';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-[80vh] flex flex-col justify-center relative pt-20 pb-10">
+    <section id="hero" className="min-h-[80vh] flex flex-col justify-center relative pt-20 pb-5">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
 
         {/* Text Content - Left Side */}
@@ -119,9 +119,6 @@ const Hero = () => {
                 className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 style={{ objectPosition: "center top" }} // Adjust this if the face gets cut off
               />
-
-              {/* Overlay gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           </div>
         </motion.div>

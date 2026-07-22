@@ -22,7 +22,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-12">
+    <section id="skills" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const Skills = () => {
         <h2 className="text-3xl md:text-5xl font-bold mb-12 flex items-center">
           <span className="text-secondary mr-4">03.</span> Technical Skills
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div key={index} className="glass-card p-8">

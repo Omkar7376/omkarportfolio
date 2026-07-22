@@ -18,7 +18,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-12">
+    <section id="education" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const Education = () => {
         <h2 className="text-3xl md:text-5xl font-bold mb-12 flex items-center">
           <span className="text-secondary mr-4">04.</span> Education
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {educations.map((edu, index) => (
             <div key={index} className="glass-card p-8 border-t-4 border-t-tertiary">

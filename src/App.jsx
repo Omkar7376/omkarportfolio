@@ -15,7 +15,7 @@ function App() {
         <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-secondary rounded-full mix-blend-multiply filter blur-[128px] animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-[128px] animate-blob animation-delay-4000"></div>
       </div>
-      
+
       <Navbar />
       <main className="container mx-auto px-6 md:px-12 pt-24 pb-12 space-y-32">
         <Hero />
@@ -25,9 +25,9 @@ function App() {
         <Education />
         <Contact />
       </main>
-      
+
       <footer className="border-t border-white/10 py-8 text-center text-textMuted text-sm">
-        <p>&copy; {new Date().getFullYear()} Omkar Mahadev Mali. Built with React & Tailwind.</p>
+        <p>&copy; {new Date().getFullYear()} Omkar Mahadev Mali.</p>
       </footer>
     </div>
   );
