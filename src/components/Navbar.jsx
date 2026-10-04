@@ -5,12 +5,13 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('#hero');
 
   const menuItems = [
     { label: 'About', href: '#hero' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
     { label: 'Education', href: '#education' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
     { label: 'Contact', href: '#contact' }
   ];
@@ -18,20 +19,56 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Determine the active section
+      const sections = menuItems.map(item => item.href);
+      let currentActive = '#hero';
+      for (const section of sections) {
+        const element = document.querySelector(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If the top of the section is somewhat near the top of the viewport
+          if (rect.top <= 200 && rect.bottom >= 200) {
+            currentActive = section;
+            break;
+          }
+        }
+      }
+      setActiveSection(currentActive);
     };
+
     window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      // Update the URL path cleanly without a # (e.g. /home, /about)
+      const pathName = targetId === '#hero' ? 'home' : targetId.substring(1);
+      window.history.pushState({}, '', `/${pathName}`);
+    }
+  };
+
+
+
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      initial={{ y: -100, x: '-50%' }}
+      animate={{ y: 0, x: '-50%' }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || mobileMenuOpen ? 'glass py-4' : 'bg-transparent py-6'}`}
+      className={`fixed top-6 left-1/2 z-50 w-[90%] md:w-auto transition-all duration-300 rounded-full border border-white/10 ${scrolled || mobileMenuOpen ? 'glass py-3 px-8 shadow-[0_0_30px_rgba(139,92,246,0.3)]' : 'bg-black/30 backdrop-blur-md py-4 px-10'}`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-tertiary">
+      <div className="flex justify-between items-center gap-10 w-full">
+        <a
+          href="#hero"
+          onClick={(e) => handleSmoothScroll(e, '#hero')}
+          className="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-tertiary"
+        >
           OM.
         </a>
 
@@ -41,7 +78,14 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-textMuted hover:text-textBase transition-colors"
+              onClick={(e) => {
+                handleSmoothScroll(e, item.href);
+                setActiveSection(item.href);
+              }}
+              className={`text-sm font-medium transition-colors ${activeSection === item.href
+                ? 'text-secondary drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]'
+                : 'text-textMuted hover:text-textBase'
+                }`}
             >
               {item.label}
             </a>
@@ -74,8 +118,15 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-base font-medium text-textMuted hover:text-secondary transition-colors py-2"
+                  onClick={(e) => {
+                    handleSmoothScroll(e, item.href);
+                    setActiveSection(item.href);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`text-base font-medium transition-colors py-2 ${activeSection === item.href
+                    ? 'text-secondary'
+                    : 'text-textMuted hover:text-secondary'
+                    }`}
                 >
                   {item.label}
                 </a>

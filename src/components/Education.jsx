@@ -7,7 +7,7 @@ const Education = () => {
       degree: 'Master of Computer Application',
       institution: 'Tatyasaheb Kore Institute of Engineering and Technology, Warananagar',
       period: '2025 - 2027 (Appearing)',
-      score: 'Sem I - SGPA – 8.29/10'
+      score: 'FY - CGPA – 8.34/10'
     },
     {
       degree: 'Bachelor of Computer Application',
