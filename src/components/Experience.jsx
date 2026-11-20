@@ -18,29 +18,29 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-4 md:py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-12 flex items-center">
-          <span className="text-secondary mr-4">01.</span> Experience
+        <h2 className="text-2xl md:text-5xl font-bold mb-6 md:mb-12 flex items-center">
+          <span className="text-secondary mr-3 md:mr-4">01.</span> Experience
         </h2>
 
-        <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-black/20 before:to-transparent">
+        <div className="space-y-6 md:space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
           {experiences.map((exp, index) => (
             <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-primary bg-secondary shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_10px_rgba(250,86,7,0.5)] z-10"></div>
+              <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-primary bg-secondary shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_10px_rgba(250,86,7,0.5)] z-10"></div>
 
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 md:p-8 hover:-translate-y-1 transition-transform">
+              <div className="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] glass-card p-5 md:p-8 hover:-translate-y-1 transition-transform">
                 <div className="flex flex-col md:flex-row justify-between mb-2">
-                  <h3 className="text-xl font-bold text-textBase">{exp.role}</h3>
-                  <span className="text-secondary font-mono text-sm">{exp.period}</span>
+                  <h3 className="text-lg md:text-xl font-bold text-textBase">{exp.role}</h3>
+                  <span className="text-secondary font-mono text-xs md:text-sm">{exp.period}</span>
                 </div>
-                <h4 className="text-lg text-tertiary mb-4 font-medium">{exp.company}</h4>
-                <p className="text-textMuted leading-relaxed">{exp.description}</p>
+                <h4 className="text-base md:text-lg text-tertiary mb-3 font-medium">{exp.company}</h4>
+                <p className="text-textMuted leading-relaxed text-sm md:text-base">{exp.description}</p>
               </div>
             </div>
           ))}
