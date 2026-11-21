@@ -6,66 +6,66 @@
 
   <!-- Main Homepage -->
   <url>
-    <loc>https://omkarmali.vercel.app/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Section Anchors for Search Crawlers -->
   <url>
-    <loc>https://omkarmali.vercel.app/#hero</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#hero</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://omkarmali.vercel.app/#projects</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#projects</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://omkarmali.vercel.app/#experience</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#experience</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omkarmali.vercel.app/#skills</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#skills</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omkarmali.vercel.app/#education</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#education</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omkarmali.vercel.app/#certifications</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#certifications</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omkarmali.vercel.app/#contact</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/#contact</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Official Resume PDF -->
   <url>
-    <loc>https://omkarmali.vercel.app/Omkar_Mali_Resume.pdf</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://omkarmali.in/Omkar_Mali_Resume.pdf</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
