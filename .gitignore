@@ -1,3 +1,27 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production / Build outputs
+dist/
+dist-ssr/
+build/
+
+# Firebase local cache & debug logs
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Environment & Secret files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
 # Logs
 logs
 *.log
@@ -7,18 +31,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Editor & IDE directories
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS Generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Temporary & Cache
+.cache/
+*.tmp
+*.temp
